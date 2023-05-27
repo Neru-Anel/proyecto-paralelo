@@ -1,0 +1,37 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+{%include "navbar.html"%}
+
+    <form action="{% url 'secuencial' %}" id="datos" method="POST"> 
+        <!-- {{ form.as_p }} -->
+        {% csrf_token %}
+		<div class="row row-cols-4 row-cols-md-4">
+		<div class ="col-md-3">
+		</div>
+		&nbsp;&nbsp;&nbsp;
+		<div class="col mb-3">
+		<br>
+			<div class="card mb-2" style="width:300px">
+					<label style="text-align: center">Texto 1</label>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" class="form-control" name="input1" placeholder="Ingresa el texto 1" style="width:298px; height:300px;" >
+			</div>
+		</div>
+		<div class="col mb-3">
+		<br>
+			<div class="card mb-2" style="width:300px">
+					<label style="text-align: center">Texto 2</label>
+					&nbsp;&nbsp;&nbsp;
+					<input type="text" class="form-control" name="input2" placeholder="Ingresa el texto 2" style="width:298px; height:300px;" >
+			</div>
+		</div>
+	</div>
+		<div style="display:flex; justify-content:center; align-items:center;">
+        <button type="submit" id="guardar" class="btn btn-primary">Consulta</button>
+		</div>
+    </form> 
+
+
+
+{% endblock %}

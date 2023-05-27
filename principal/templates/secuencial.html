@@ -1,0 +1,11 @@
+{% extends "base/base.html" %}
+
+
+
+{% block content %}
+{%include "navbar.html"%}
+{% csrf_token %}
+<p>Nombre: {{ texto_1 }}</p>
+<p>Email: {{ texto_2 }}</p>
+
+{% endblock %}
